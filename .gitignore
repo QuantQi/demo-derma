@@ -113,3 +113,10 @@ storybook-static/
 
 # Turbopack
 .turbo/
+
+# Firebase
+firebase-service-account.json
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
