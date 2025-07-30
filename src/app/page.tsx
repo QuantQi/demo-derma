@@ -1,103 +1,98 @@
-import Image from "next/image";
+import HeroSection from "../components/HeroSection";
+import CardGrid from "../components/CardGrid";
+import TestimonialBlock from "../components/TestimonialBlock";
+import { testimonials, blogPosts } from "../data/sampleData";
+import Link from "next/link";
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const aboutCards = [
+    {
+      title: "Face",
+      image: "/images/about/face.jpg",
+      description: "Advanced facial treatments including dermal fillers, Botox, and skin rejuvenation.",
+      href: "/services?category=face"
+    },
+    {
+      title: "Body", 
+      image: "/images/about/body.jpg",
+      description: "Body contouring, laser hair removal, and comprehensive body treatments.",
+      href: "/services?category=body"
+    },
+    {
+      title: "Hair",
+      image: "/images/about/hair.jpg", 
+      description: "Professional hair restoration and laser hair removal treatments.",
+      href: "/services?category=hair"
+    }
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  return (
+    <div>
+      {/* Hero Section */}
+      <HeroSection 
+        headline="We're here to bring the beauty to you!"
+      />
+
+      {/* About Preview */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto mb-8">
+              At MB Derma, we believe that everyone deserves to feel confident and beautiful in their own skin. 
+              Our expert team combines years of experience with the latest aesthetic treatments to help you achieve 
+              your beauty goals safely and effectively.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
+              Whether you&apos;re looking for anti-aging treatments, skin rejuvenation, or body contouring, 
+              we provide personalized care in a comfortable, professional environment.
+            </p>
+          </div>
+          
+          <CardGrid cards={aboutCards} columns={3} />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* Blog Teaser */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-light text-center text-gray-900 mb-12 uppercase tracking-wide">
+            Latest from Our Blog
+          </h2>
+          
+          {/* Featured Post */}
+          <div className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden max-w-2xl mx-auto">
+            <div className="aspect-[16/9] relative bg-gray-100 flex items-center justify-center">
+              <span className="text-gray-500 text-sm">Blog Image</span>
+            </div>
+            <div className="p-6">
+              <h3 className="text-xl font-light text-gray-900 mb-3 leading-tight">
+                {blogPosts[0].title}
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                {blogPosts[0].excerpt}
+              </p>
+              <Link 
+                href={blogPosts[0].href}
+                className="inline-block text-accent hover:text-opacity-80 text-sm uppercase tracking-wide font-light transition-colors"
+              >
+                Read More →
+              </Link>
+            </div>
+          </div>
+
+          <div className="text-center mt-8">
+            <Link 
+              href="/blog"
+              className="inline-block bg-accent text-white px-6 py-2 rounded-full font-light uppercase tracking-wide text-sm hover:bg-opacity-90 transition-colors"
+            >
+              View All Posts
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <TestimonialBlock testimonials={testimonials.slice(0, 6)} />
     </div>
   );
 }
