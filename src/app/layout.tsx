@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import FirebaseAnalytics from "../components/FirebaseAnalytics";
 
 export const metadata: Metadata = {
   title: "MB Derma - Health and Beauty Care",
@@ -21,6 +22,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <FirebaseAnalytics />
       </body>
     </html>
   );
