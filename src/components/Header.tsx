@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function Header() {
@@ -91,8 +92,8 @@ export default function Header() {
               </a>
             </div>
             <div className="flex space-x-1 ml-4">
-              <img src="/flags/uk.png" alt="English" className="w-6 h-4 cursor-pointer hover:opacity-80 transition-opacity" />
-              <img src="/flags/poland.png" alt="Polish" className="w-6 h-4 cursor-pointer hover:opacity-80 transition-opacity" />
+              <Image src="/flags/uk.png" alt="English" width={24} height={16} className="cursor-pointer hover:opacity-80 transition-opacity" />
+              <Image src="/flags/poland.png" alt="Polish" width={24} height={16} className="cursor-pointer hover:opacity-80 transition-opacity" />
             </div>
           </div>
 

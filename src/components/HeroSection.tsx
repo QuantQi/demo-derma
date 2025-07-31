@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 
 interface HeroSectionProps {
   headline: string;
@@ -7,7 +6,6 @@ interface HeroSectionProps {
   ctaHref?: string;
   className?: string;
   description?: string;
-  image?: string;
 }
 
 export default function HeroSection({ 
@@ -15,8 +13,7 @@ export default function HeroSection({
   ctaText = "Contact us", 
   ctaHref = "/contact",
   className = "",
-  description = "Large tagline in white sans‑serif font overlaying a split layout",
-  image = "/images/hero/hero-model.jpg"
+  description = "Large tagline in white sans‑serif font overlaying a split layout"
 }: HeroSectionProps) {
   return (
     <section className={`relative min-h-[600px] bg-gradient-to-r from-beige to-cream overflow-hidden ${className}`}>

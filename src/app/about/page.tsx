@@ -52,7 +52,7 @@ export default function AboutPage() {
                   creating a welcoming environment where you can relax and trust in our expertise.
                 </p>
                 <p className="text-dark-grey leading-relaxed">
-                  From the moment you book your consultation to your aftercare support, we're here to guide you 
+                  From the moment you book your consultation to your aftercare support, we&apos;re here to guide you 
                   through every step of your aesthetic journey. Your satisfaction and wellbeing are our top priorities.
                 </p>
               </div>

@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function CO2LaserPage() {
   return (
     <div>
@@ -118,7 +120,7 @@ export default function CO2LaserPage() {
               <div>
                 <h3 className="text-xl font-light text-gold mb-3">Full Recovery (7-14 days)</h3>
                 <p className="text-dark-grey leading-relaxed">
-                  Once the peeling is complete, you'll begin to see your new, rejuvenated skin. Continue with 
+                  Once the peeling is complete, you&apos;ll begin to see your new, rejuvenated skin. Continue with 
                   gentle skincare and daily SPF protection. You may return to normal activities, but avoid 
                   strenuous exercise for the first week.
                 </p>
@@ -143,12 +145,12 @@ export default function CO2LaserPage() {
       <section className="py-8 bg-white border-t border-gray-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
-            <a href="/services/carbon-laser-facial" className="text-gold hover:text-opacity-80 text-sm">
+            <Link href="/services/carbon-laser-facial" className="text-gold hover:text-opacity-80 text-sm">
               ← Previous: Carbon Laser Facial
-            </a>
-            <a href="/services/dermal-fillers" className="text-gold hover:text-opacity-80 text-sm">
+            </Link>
+            <Link href="/services/dermal-fillers" className="text-gold hover:text-opacity-80 text-sm">
               Next: Dermal Fillers →
-            </a>
+            </Link>
           </div>
         </div>
       </section>

@@ -47,8 +47,8 @@ export default function PrivacyPolicyPage() {
                 language preference, referring site, and the date and time of each visitor request.
               </p>
               <p className="text-dark-grey leading-relaxed">
-                MB Derma's purpose in collecting non-personally identifying information is to better understand 
-                how MB Derma's visitors use its website. From time to time, MB Derma may release 
+                MB Derma&apos;s purpose in collecting non-personally identifying information is to better understand 
+                how MB Derma&apos;s visitors use its website. From time to time, MB Derma may release 
                 non-personally-identifying information in the aggregate, e.g., by publishing a report on 
                 trends in the usage of its website.
               </p>
@@ -57,14 +57,14 @@ export default function PrivacyPolicyPage() {
             <div>
               <h2 className="text-2xl font-light text-gold mb-4">Gathering of Personally-Identifying Information</h2>
               <p className="text-dark-grey leading-relaxed">
-                Certain visitors to MB Derma's website choose to interact with MB Derma in ways that require 
+                Certain visitors to MB Derma&apos;s website choose to interact with MB Derma in ways that require 
                 MB Derma to gather personally-identifying information. The amount and type of information that 
                 MB Derma gathers depends on the nature of the interaction.
               </p>
               <p className="text-dark-grey leading-relaxed">
                 For example, we ask visitors who book consultations to provide their name, email address, 
                 and phone number. In each case, MB Derma collects such information only insofar as is necessary 
-                or appropriate to fulfill the purpose of the visitor's interaction with MB Derma.
+                or appropriate to fulfill the purpose of the visitor&apos;s interaction with MB Derma.
               </p>
             </div>
 
@@ -96,7 +96,7 @@ export default function PrivacyPolicyPage() {
               <h2 className="text-2xl font-light text-gold mb-4">Links to External Sites</h2>
               <p className="text-dark-grey leading-relaxed">
                 Our Service may contain links to external sites that are not operated by us. If you click on a 
-                third party link, you will be directed to that third party's site. We strongly advise you to 
+                third party link, you will be directed to that third party&apos;s site. We strongly advise you to 
                 review the Privacy Policy and terms and conditions of every site you visit.
               </p>
               <p className="text-dark-grey leading-relaxed">
@@ -121,24 +121,24 @@ export default function PrivacyPolicyPage() {
             <div>
               <h2 className="text-2xl font-light text-gold mb-4">Cookies</h2>
               <p className="text-dark-grey leading-relaxed">
-                To enrich and perfect your online experience, MB Derma uses "Cookies", similar technologies 
+                To enrich and perfect your online experience, MB Derma uses &quot;Cookies&quot;, similar technologies 
                 and services provided by others to display personalized content, appropriate advertising and 
                 store your preferences on your computer.
               </p>
               <p className="text-dark-grey leading-relaxed">
-                A cookie is a string of information that a website stores on a visitor's computer, and that 
-                the visitor's browser provides to the website each time the visitor returns. MB Derma uses 
+                A cookie is a string of information that a website stores on a visitor&apos;s computer, and that 
+                the visitor&apos;s browser provides to the website each time the visitor returns. MB Derma uses 
                 cookies to help MB Derma identify and track visitors, their usage of MB Derma website, and 
                 their website access preferences.
               </p>
               <p className="text-dark-grey leading-relaxed">
                 MB Derma visitors who do not wish to have cookies placed on their computers should set their 
-                browsers to refuse cookies before using MB Derma's website, with the drawback that certain 
-                features of MB Derma's website may not function properly without the aid of cookies.
+                browsers to refuse cookies before using MB Derma&apos;s website, with the drawback that certain 
+                features of MB Derma&apos;s website may not function properly without the aid of cookies.
               </p>
               <p className="text-dark-grey leading-relaxed">
                 By continuing to navigate our website without changing your cookie settings, you hereby 
-                acknowledge and agree to MB Derma's use of cookies.
+                acknowledge and agree to MB Derma&apos;s use of cookies.
               </p>
             </div>
 
@@ -146,7 +146,7 @@ export default function PrivacyPolicyPage() {
               <h2 className="text-2xl font-light text-gold mb-4">Privacy Policy Changes</h2>
               <p className="text-dark-grey leading-relaxed">
                 Although most changes are likely to be minor, MB Derma may change its Privacy Policy from 
-                time to time, and in MB Derma's sole discretion. MB Derma encourages visitors to frequently 
+                time to time, and in MB Derma&apos;s sole discretion. MB Derma encourages visitors to frequently 
                 check this page for any changes to its Privacy Policy.
               </p>
               <p className="text-dark-grey leading-relaxed">

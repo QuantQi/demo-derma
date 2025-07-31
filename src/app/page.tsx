@@ -1,5 +1,4 @@
 import HeroSection from "../components/HeroSection";
-import CardGrid from "../components/CardGrid";
 import TestimonialBlock from "../components/TestimonialBlock";
 import { testimonials, blogPosts, serviceCategories } from "../data/sampleData";
 import Link from "next/link";
