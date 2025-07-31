@@ -1,32 +1,75 @@
 import { testimonials } from "../../data/sampleData";
 
+// Extended reviews for the reviews page
+const extendedReviews = [
+  ...testimonials,
+  {
+    text: "Professional service from start to finish. The consultation was thorough and I felt completely at ease throughout the entire process.",
+    author: "Sophie Richardson", 
+    rating: 5
+  },
+  {
+    text: "Amazing results from my dermal filler treatment. The team really knows what they're doing and the aftercare was excellent.",
+    author: "Maria Santos",
+    rating: 5
+  },
+  {
+    text: "I've been coming to MB Derma for over a year now and consistently receive outstanding service. Highly recommend!",
+    author: "Jennifer Walsh",
+    rating: 5
+  },
+  {
+    text: "The clinic is clean, modern and the staff are incredibly knowledgeable. My skin has never looked better!",
+    author: "Claire Thompson",
+    rating: 5
+  },
+  {
+    text: "Excellent experience with my laser treatment. The results exceeded my expectations and the team was very professional.",
+    author: "David Mitchell",
+    rating: 5
+  },
+  {
+    text: "I was nervous about my first treatment but the team made me feel so comfortable. The results speak for themselves!",
+    author: "Rebecca Jones",
+    rating: 5
+  }
+];
+
 export default function ReviewsPage() {
   return (
     <div>
-      {/* Hero Title */}
-      <section className="py-16 bg-white">
+      {/* Breadcrumb */}
+      <section className="py-4 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-light text-gray-900 mb-8 text-left">
-            Reviews
-          </h1>
-          <p className="text-lg text-gray-600 leading-relaxed max-w-3xl">
-            Read what our satisfied clients have to say about their experience at MB Derma. 
-            We&apos;re proud of the trust our clients place in us and the results we deliver.
-          </p>
+          <nav className="text-sm">
+            <span className="text-dark-grey">Home</span>
+            <span className="text-dark-grey mx-2">/</span>
+            <span className="text-gold">Reviews</span>
+          </nav>
         </div>
       </section>
 
-      {/* Reviews List */}
-      <section className="py-16 bg-gray-50">
+      {/* Hero Title */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-5xl font-light text-gold mb-8">
+            Reviews
+          </h1>
+        </div>
+      </section>
+
+      {/* Testimonials Grid */}
+      <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[...testimonials, ...testimonials, ...testimonials].map((testimonial, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {extendedReviews.map((testimonial, index) => (
+              <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 relative">
+                {/* Star icons at top */}
                 <div className="flex justify-center mb-4">
                   {[...Array(5)].map((_, i) => (
                     <svg
                       key={i}
-                      className={`w-5 h-5 ${i < (testimonial.rating || 0) ? 'text-yellow-400' : 'text-gray-300'}`}
+                      className={`w-4 h-4 ${i < (testimonial.rating || 0) ? 'text-gold' : 'text-gray-300'}`}
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -34,35 +77,16 @@ export default function ReviewsPage() {
                     </svg>
                   ))}
                 </div>
-                <blockquote className="text-gray-700 text-center italic leading-relaxed mb-4">
+                
+                <blockquote className="text-dark-grey leading-relaxed mb-4">
                   &ldquo;{testimonial.text}&rdquo;
                 </blockquote>
-                <p className="text-accent text-center font-light uppercase tracking-wide text-sm">
+                
+                <p className="text-gold text-center font-light text-sm">
                   — {testimonial.author}
                 </p>
               </div>
             ))}
-          </div>
-
-          {/* Review Sources */}
-          <div className="mt-16 text-center">
-            <p className="text-gray-600 mb-6">
-              Our reviews are collected from various platforms including Google Reviews and Facebook.
-            </p>
-            <div className="flex justify-center space-x-8">
-              <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-blue-600 rounded text-white flex items-center justify-center text-sm font-bold">
-                  G
-                </div>
-                <span className="text-gray-700">Google Reviews</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-blue-800 rounded text-white flex items-center justify-center text-sm font-bold">
-                  f
-                </div>
-                <span className="text-gray-700">Facebook Reviews</span>
-              </div>
-            </div>
           </div>
         </div>
       </section>
