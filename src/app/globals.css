@@ -1,16 +1,26 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --accent: #e64c8b;
+  --accent: #d1ad7d;
+  --gold: #d1ad7d;
+  --beige: #f5f1eb;
+  --cream: #faf8f5;
+  --dark-grey: #4a4a4a;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
-  --font-sans: "Poppins", "Montserrat", system-ui, -apple-system, sans-serif;
+  --color-gold: var(--gold);
+  --color-beige: var(--beige);
+  --color-cream: var(--cream);
+  --color-dark-grey: var(--dark-grey);
+  --font-sans: "Montserrat", system-ui, -apple-system, sans-serif;
+  --font-serif: "Times New Roman", serif;
   --font-mono: "Monaco", "Menlo", monospace;
 }
 
@@ -26,4 +36,53 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
   font-weight: 300;
+}
+
+/* MB Derma specific utility classes */
+.text-gold {
+  color: var(--gold);
+}
+
+.bg-gold {
+  background-color: var(--gold);
+}
+
+.bg-beige {
+  background-color: var(--beige);
+}
+
+.bg-cream {
+  background-color: var(--cream);
+}
+
+.text-dark-grey {
+  color: var(--dark-grey);
+}
+
+.border-gold {
+  border-color: var(--gold);
+}
+
+.hover\:text-gold:hover {
+  color: var(--gold);
+}
+
+.hover\:bg-gold:hover {
+  background-color: var(--gold);
+}
+
+/* Custom wavy separator */
+.wavy-separator {
+  position: relative;
+}
+
+.wavy-separator::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z' fill='%23f5f1eb'%3E%3C/path%3E%3C/svg%3E") no-repeat;
+  background-size: cover;
 }
