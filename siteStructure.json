@@ -1,0 +1,182 @@
+[
+  {
+    "pageType": "HomePage",
+    "pageKey": "home",
+    "components": [
+      {
+        "type": "Header",
+        "props": {
+          "logo": "/themes/mb-derma/assets/images/logo-new.svg",
+          "navItems": [
+            { "label": "Home", "href": "/" },
+            {
+              "label": "About",
+              "submenu": [
+                { "label": "About us", "href": "/about" },
+                { "label": "Reviews", "href": "/reviews" },
+                { "label": "Gallery", "href": "/gallery" }
+              ]
+            },
+            {
+              "label": "Treatments",
+              "submenu": [
+                { "label": "Services", "href": "/services" },
+                { "label": "Pricelist", "href": "/pricelist" }
+              ]
+            },
+            { "label": "Blog", "href": "/blog" },
+            {
+              "label": "Forms",
+              "submenu": [
+                { "label": "Dermal Fillers / Skin Boosters / Mesotherapy", "href": "/consent-form-for-dermal-fillers" },
+                { "label": "Botulinum Toxin", "href": "/consent-form-for-botulinum-toxin" },
+                { "label": "Fat Dissolving / Cellulite Mesotherapy", "href": "/consent-form-for-fat-dissolving-cellulite-mesotherapy" },
+                { "label": "Micro Sclerotherapy", "href": "/consent-form-for-micro-sclerotherapy" },
+                { "label": "PDO / PLLA Threads", "href": "/consent-form-for-pdo-plla-threads" }
+              ]
+            },
+            { "label": "Contact", "href": "/contact" }
+          ],
+          "socialIcons": [
+            { "platform": "Facebook", "href": "https://m.facebook.com/pg/MBDerma.co.uk" },
+            { "platform": "TikTok", "href": "https://vm.tiktok.com/ZMLqmTfgG/" },
+            { "platform": "Instagram", "href": "https://www.instagram.com/mb_derma_clinic/" }
+          ]
+        },
+        "styleTokens": {
+          "bg": "white",
+          "text": "text-gold",
+          "font": "font-sans"
+        },
+        "delta": {
+          "tech": "Replaced PHP include with React ",
+          "style": "Swapped inline styles for Tailwind classes"
+        }
+      },
+      {
+        "type": "HeroSection",
+        "props": {
+          "headline": ["We're here to", "bring the beauty to you!"],
+          "button": { "label": "Contact us", "href": "/contact" },
+          "bgImage": "/themes/mb-derma/assets/images/home-hero.jpg",
+          "imageProps": { "alt": "Beautiful smiling woman", "layout": "cover", "lazy": true }
+        },
+        "styleTokens": { "bg": "bg-beige", "text": "text-charcoal", "padding": "py-20" },
+        "delta": {
+          "structure": "Now a React component using next/image",
+          "behaviour": "Lazy-load & responsive srcset added"
+        }
+      },
+      {
+        "type": "AboutTeaser",
+        "props": {
+          "title": "About us",
+          "columns": [
+            "MB Derma Clinic is a unique place created out of passion in the broadly understood fields of health and aesthetics...",
+            "MB Derma Clinic ethos is, investing in the training, development, research and testing of any new treatments and products..."
+          ],
+          "decor": { "text": "US", "rotation": -90, "bg": "#F8F4EF", "opacity": 0.2 }
+        },
+        "styleTokens": { "grid": "grid-cols-3 gap-8", "font": "font-medium" },
+        "delta": {
+          "layout": "Converted 3-column flex to CSS Grid",
+          "decor": "Added rotated 'ABOUT US' background element"
+        }
+      },
+      {
+        "type": "ServiceGrid",
+        "props": {
+          "items": [
+            {
+              "title": "Face",
+              "desc": "Let's take care of your beautiful face – it's what people see first when they meet you!",
+              "icon": "/storage/app/media/face.png",
+              "href": "/services/#face"
+            },
+            {
+              "title": "Body",
+              "desc": "Look after your precious body with us – care for it and it will serve you for years to come.",
+              "icon": "/storage/app/media/body.png",
+              "href": "/services/#body"
+            },
+            {
+              "title": "Hair",
+              "desc": "Your hair is your crown! Let's make it beautiful and healthy. Make it shine!",
+              "icon": "/storage/app/media/hair.png",
+              "href": "/services/#hair"
+            }
+          ]
+        },
+        "styleTokens": { "grid": "md:grid-cols-3 gap-6", "hoverRing": "hover:ring-2 ring-gold" },
+        "delta": {
+          "implementation": "Now built as React <servicecard> with Tailwind hover states"
+        }
+      },
+      {
+        "type": "TestimonialSlider",
+        "props": {
+          "slides": [
+            { "quote": "I opted for Glow treatment at MB Derma - I couldn't be happier!", "author": "Alice Rowlatt" },
+            { "quote": "My hair was so weak I couldn't cope anymore...", "author": "Alison McIntyre" },
+            { "quote": "I had some visible scars I wanted to minimise...", "author": "Becca Curtis" },
+            { "quote": "My lipolysis treatment got rid of my cellulite...", "author": "Emily Paul" },
+            { "quote": "I came to Monika with some skin problems...", "author": "Heather Teahan" }
+          ],
+          "carouselOptions": { "autoplay": true, "dots": true, "infinite": true }
+        },
+        "styleTokens": { "container": "px-4 py-12 bg-white" },
+        "delta": { "type": "Replaced static grid with Flickity carousel" }
+      },
+      {
+        "type": "BlogPreviewGrid",
+        "props": {
+          "postsPerPage": 6,
+          "cards": "sm:grid-cols-2 lg:grid-cols-3 gap-8"
+        },
+        "delta": { "layout": "Changed from masonry to fixed grid" }
+      },
+      {
+        "type": "Footer",
+        "props": {
+          "menu": [
+            { "label": "Home", "href": "/" },
+            {
+              "label": "About",
+              "submenu": [
+                { "label": "About us", "href": "/about" },
+                { "label": "Reviews", "href": "/reviews" },
+                { "label": "Gallery", "href": "/gallery" }
+              ]
+            },
+            {
+              "label": "Treatments",
+              "submenu": [
+                { "label": "Services", "href": "/services" },
+                { "label": "Pricelist", "href": "/pricelist" }
+              ]
+            },
+            { "label": "Blog", "href": "/blog" },
+            {
+              "label": "Forms",
+              "submenu": [
+                { "label": "Dermal Fillers / Skin Boosters / Mesotherapy", "href": "/consent-form-for-dermal-fillers" },
+                { "label": "Botulinum Toxin", "href": "/consent-form-for-botulinum-toxin" },
+                { "label": "Fat Dissolving / Cellulite Mesotherapy", "href": "/consent-form-for-fat-dissolving-cellulite-mesotherapy" },
+                { "label": "Micro Sclerotherapy", "href": "/consent-form-for-micro-sclerotherapy" },
+                { "label": "PDO / PLLA Threads", "href": "/consent-form-for-pdo-plla-threads" }
+              ]
+            },
+            { "label": "Contact", "href": "/contact" }
+          ],
+          "socialIcons": [
+            { "platform": "Facebook", "href": "https://m.facebook.com/pg/MBDerma.co.uk" },
+            { "platform": "TikTok", "href": "https://vm.tiktok.com/ZMLqmTfgG/" },
+            { "platform": "Instagram", "href": "https://www.instagram.com/mb_derma_clinic/" }
+          ],
+          "legal": "© 2025 MB Derma Clinic. All rights reserved."
+        },
+        "delta": { "style": "Cleaned up markup, unified with Header links" }
+      }
+    ]
+  }
+]

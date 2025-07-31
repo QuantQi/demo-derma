@@ -1,26 +1,26 @@
 export const testimonials = [
   {
-    text: "I opted for Glow treatment at MB Derma – I couldn't be happier with the results!",
+    text: "I opted for Glow treatment at MB Derma - I couldn't be happier!",
     author: "Alice Rowlatt",
     rating: 5
   },
   {
-    text: "My hair was so weak I couldn't cope anymore. I went to Monika for hair treatment and I love it!",
+    text: "My hair was so weak I couldn't cope anymore...",
     author: "Alison McIntyre",
     rating: 5
   },
   {
-    text: "I had some visible scars I wanted to minimise. Monika advised a perfect treatment and they are less visible now!",
+    text: "I had some visible scars I wanted to minimise...",
     author: "Becca Curtis",
     rating: 5
   },
   {
-    text: "My lipolysis treatment got rid of my cellulite that I struggled with for so long! Thank you Monika!",
+    text: "My lipolysis treatment got rid of my cellulite...",
     author: "Emily Paul",
     rating: 5
   },
   {
-    text: "I came to Monika with some skin problems and she was lovely and very informative. Would 100% recommend!",
+    text: "I came to Monika with some skin problems...",
     author: "Heather Teahan",
     rating: 5
   },
@@ -184,20 +184,20 @@ export const priceList = {
 export const serviceCategories = [
   {
     title: "Face",
-    image: "/images/about/face.jpg",
+    image: "/storage/app/media/face.png",
     description: "Let's take care of your beautiful face – it's what people see first when they meet you!",
-    href: "/services?category=face"
+    href: "/services/#face"
   },
   {
     title: "Body", 
-    image: "/images/about/body.jpg",
+    image: "/storage/app/media/body.png",
     description: "Look after your precious body with us – care for it and it will serve you for years to come.",
-    href: "/services?category=body"
+    href: "/services/#body"
   },
   {
     title: "Hair",
-    image: "/images/about/hair.jpg", 
-    description: "Your hair is your crown! Let's make it beautiful and healthy. Make it shine.",
-    href: "/services?category=hair"
+    image: "/storage/app/media/hair.png", 
+    description: "Your hair is your crown! Let's make it beautiful and healthy. Make it shine!",
+    href: "/services/#hair"
   }
 ];
