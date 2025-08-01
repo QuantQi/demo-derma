@@ -8,7 +8,7 @@ export default function Home() {
     <div>
       {/* Hero Section */}
       <HeroSection 
-        headline="We're here to bring the beauty to you!"
+        headline={["We're here to", "bring the beauty to you!"]}
         description="Professional dermatology and aesthetic treatments in a comfortable, caring environment"
       />
 

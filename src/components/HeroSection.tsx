@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 interface HeroSectionProps {
-  headline: string;
+  headline: string | string[];
   ctaText?: string;
   ctaHref?: string;
   className?: string;
@@ -22,7 +22,18 @@ export default function HeroSection({
           {/* Left Column - Content */}
           <div className="flex flex-col justify-center space-y-6 py-16 lg:py-24">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight">
-              {headline}
+              {Array.isArray(headline) ? (
+                <>
+                  {headline.map((line, index) => (
+                    <span key={index}>
+                      {line}
+                      {index < headline.length - 1 && <br />}
+                    </span>
+                  ))}
+                </>
+              ) : (
+                headline
+              )}
             </h1>
             <p className="text-lg text-white/90 leading-relaxed max-w-lg">
               {description}
